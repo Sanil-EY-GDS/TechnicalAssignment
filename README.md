@@ -106,7 +106,7 @@ value: select sample csv file
     https://external/pricing/{sku}
     ```
   - Returns a `Double` (unit price).
--**External Inventory API:**
+**External Inventory API:**
 ```http://localhost:8080/external/inventory?sku={sku}&qty={qty}
 ``` 
  
@@ -122,7 +122,7 @@ value: select sample csv file
  
 ---
  
-## ✅ Run Instructions
+##  Run Instructions
 1. Clone repo/install zip file in local
   
 2. Update `application.properties` with DB credentials.  
@@ -138,7 +138,7 @@ value: select sample csv file
  
 ---
  
-## ⚠️ Note
+##  Note
 - If the external pricing API is down or returns null, the order will fail with an error.  
 - Validation ensures `custid`, `sku`, and `qty` are required.
 
