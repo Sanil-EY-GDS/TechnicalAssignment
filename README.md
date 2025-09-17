@@ -107,7 +107,7 @@ value: select sample csv file
     ```
   - Returns a `Double` (unit price).
     
-**External Inventory API:**
+- **External Inventory API:**
 ```
 http://localhost:8080/external/inventory?sku={sku}&qty={qty}
 
@@ -115,9 +115,9 @@ http://localhost:8080/external/inventory?sku={sku}&qty={qty}
  
 ---
  
-## 🛠 Tech Stack
-- Java 17+  
-- Spring Boot 3+  
+##  Tech Stack
+- Java  
+- Spring Boot   
 - Spring Data JPA  
 - Hibernate  
 - PostgreSQL  
