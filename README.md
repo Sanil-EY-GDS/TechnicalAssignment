@@ -1,5 +1,5 @@
 # TechnicalAssignment
-# 📦 Order Management System with External Pricing API
+#  Order Management System with External Pricing API
  
 ##  Overview
 This project is a **Spring Boot REST API** for managing customer orders.  
@@ -7,7 +7,7 @@ It integrates with an **external pricing service** to fetch product prices, mult
  
 ---
  
-## 📂 Project Structure
+##  Project Structure
 ```
 src/main/java/com/example/technicalassignment/
 │
@@ -31,7 +31,7 @@ src/main/java/com/example/technicalassignment/
  
 ---
  
-## 🗄 Database Schema
+##  Database Schema
  
 ### Table: `orders`
 ```sql
@@ -69,12 +69,6 @@ CREATE TABLE orders (
 3. Calculates `totalPrice = unitPrice × qty`.  
 4. Saves order in DB with `status = CONFIRMED`.  
  
-```
- 
----
- 
-
-```
  
 ---
  
@@ -92,10 +86,18 @@ CREATE TABLE orders (
     "totalPrice": 1001.0
 }]
 ```
+### 3. Create Order by CSV upload  
+**POST** `/orders/batch-upload`
+#### Request Body
+```json
+key:file
+Type:file
+value: select sample csv file
+```
  
 ---
  
-## ⚙️ Configuration
+##  Configuration
  
 - **Database:** PostgreSQL (update `application.properties` with your DB details).  
 - **External Pricing API:**  
@@ -121,7 +123,7 @@ CREATE TABLE orders (
 ---
  
 ## ✅ Run Instructions
-1. Clone repo:
+1. Clone repo/install zip file in local
   
 2. Update `application.properties` with DB credentials.  
 3. Run the app:
@@ -132,14 +134,11 @@ CREATE TABLE orders (
  
 ---
  
-## 🔎 Example Postman Collection
-- **POST** `/orders` → Create order  
-- **GET** `/orders` → Get all orders  
-- **GET** `/orders/{id}` → Get order by ID  
+
  
 ---
  
 ## ⚠️ Note
 - If the external pricing API is down or returns null, the order will fail with an error.  
-- Validation ensures `custId`, `productCode`, and `qty` are required.
+- Validation ensures `custid`, `sku`, and `qty` are required.
 
