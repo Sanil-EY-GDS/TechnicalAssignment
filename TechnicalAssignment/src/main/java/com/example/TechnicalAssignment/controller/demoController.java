@@ -47,6 +47,7 @@ public class demoController {
         if(file.isEmpty()){
             return ResponseEntity.badRequest().body("file empty");
         }
+        service.uploadFile(file);
         return ResponseEntity.ok("file upload is successful");
     }
 
