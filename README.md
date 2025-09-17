@@ -115,7 +115,7 @@ http://localhost:8080/external/inventory?sku={sku}&qty={qty}
  
 ---
  
-##  Tech Stack
+## Tech Stack
 - Java  
 - Spring Boot   
 - Spring Data JPA  
