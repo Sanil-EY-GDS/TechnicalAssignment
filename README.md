@@ -106,8 +106,11 @@ value: select sample csv file
     https://external/pricing/{sku}
     ```
   - Returns a `Double` (unit price).
+    
 **External Inventory API:**
-```http://localhost:8080/external/inventory?sku={sku}&qty={qty}
+```
+http://localhost:8080/external/inventory?sku={sku}&qty={qty}
+
 ``` 
  
 ---
