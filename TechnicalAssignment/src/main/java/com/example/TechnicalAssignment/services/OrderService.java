@@ -7,7 +7,10 @@ import com.example.TechnicalAssignment.orderDB;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Optional;
 
@@ -49,5 +52,29 @@ public class OrderService {
     }
 
     public void show() {
+    }
+    public void uploadFile(MultipartFile file){
+        try(BufferedReader reader=new BufferedReader(new InputStreamReader(file.getInputStream()))){
+             reader.lines().skip(1).forEach(line ->{
+
+                 try{
+                     String[] data=line.split(",");
+                     String custid=data[0].trim();
+                     String sku=data[1].trim();
+                     int qty=Integer.parseInt((data[2].trim()));
+
+                     Order order=new Order();
+                     order.setCustID(custid);
+                     order.setSku(sku);
+                     order.setQty(qty);
+                     order.setStatus("CONFIRMED");
+                     db.save(order);
+                 } catch (Exception e) {
+                     throw new RuntimeException(e);
+                 }
+             });
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }
