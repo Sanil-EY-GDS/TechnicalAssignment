@@ -25,8 +25,8 @@ src/main/java/com/example/technicalassignment/
     └──inventoryResponse
     └── pricingResponse
 │
-├── repository/
-│   └── OrderDB
+├── orderDB
+│   
 ```
  
 ---
