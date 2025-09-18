@@ -20,7 +20,8 @@ import java.util.Optional;
 public class demoController {
     @Autowired
     OrderService service;
-    //ext api code
+
+    //external api code
     pricingResponse pricing;
     InventoryResponse inventory;
 
@@ -58,9 +59,9 @@ public class demoController {
 
 
     //GET Requests
+    //to check GET is running request all orders first
     @GetMapping("/orders")
     public ResponseEntity<List<Order>> getOrder(){
-//      System.out.println("get runs");
         return ResponseEntity.ok(service.getOrder());
 
     }

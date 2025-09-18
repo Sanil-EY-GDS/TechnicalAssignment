@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/external")
 public class externalController {
 
+    //pricing and inventory api
+    //integrated with the demoController, running on the same port
     @GetMapping("/pricing/{sku}")
     public ResponseEntity<pricingResponse> getPricing(@PathVariable String sku,
                                                       @RequestParam(defaultValue = "1") int qty) {

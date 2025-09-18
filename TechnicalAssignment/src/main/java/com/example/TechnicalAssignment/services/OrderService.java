@@ -62,15 +62,14 @@ public class OrderService {
                      String custid=data[0].trim();
                      String sku=data[1].trim();
                      int qty=Integer.parseInt((data[2].trim()));
-                     System.out.println("batch order parsed");
-
-
-                     Order order=new Order();
-                     order.setCustID(custid);
-                     order.setSku(sku);
-                     order.setQty(qty);
-                     order.setStatus("CONFIRMED");
-                     System.out.println("batch order saved");
+                     //this runs for each time and order is detected in csv
+                        System.out.println("batch order parsed");
+                        Order order=new Order();
+                        order.setCustID(custid);
+                        order.setSku(sku);
+                        order.setQty(qty);
+                        order.setStatus("CONFIRMED");
+                        System.out.println("batch order saved");
                      db.save(order);
                  } catch (Exception e) {
                      throw new RuntimeException(e);

@@ -20,6 +20,7 @@ public class Order {
 
     @Getter
     @Setter
+    //making sure the request json has all the keys in POST/orders
     @NotBlank(message="customer id is required")
     @Column(nullable = false)
     private String custID;
