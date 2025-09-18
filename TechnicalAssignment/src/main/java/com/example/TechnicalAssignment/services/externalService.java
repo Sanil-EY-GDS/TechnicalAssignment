@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-public class external {
+public class externalService {
 
     private final RestTemplate restTemplate = new RestTemplate();
     private final String pricingBaseUrl = "http://localhost:8080/external/pricing";

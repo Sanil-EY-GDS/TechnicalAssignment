@@ -21,7 +21,7 @@ public class OrderService {
     @Autowired
     orderDB db;
     @Autowired
-    external ext;
+    externalService ext;
 
 
     public List<Order> getOrder() {
