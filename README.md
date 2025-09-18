@@ -3,7 +3,8 @@
  
 ##  Overview
 This project is a **Spring Boot REST API** for managing customer orders.  
-It integrates with an **external pricing service** to fetch product prices, multiplies them by the ordered quantity, and stores the order details in the database.  
+It integrates with an **external pricing service** to fetch product prices, multiplies them by the ordered quantity, and stores the order details in the database. 
+*Please refer to DetailedArchitecture.pdf file for understanding the architecture better.*
  
 ---
  
